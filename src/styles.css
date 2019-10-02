@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+  font-family: sans-serif;
+  border-radius: 3px;
+  padding: 80px;
+}
+
+*:focus{
+  outline: none;
+}
