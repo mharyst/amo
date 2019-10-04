@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import {fetchData} from './utils'
 import Column from './column'
-
+import Row from './row'
 
 const Table = () => {
   const [loading, setLoading] = useState(true)
@@ -44,12 +44,11 @@ const Table = () => {
           ))}
         </tr>
         {visibleRows.map((row, rowIndex) => (
-          <tr key={`${row}-${rowIndex + 1}`}>
-            <td>{row}</td>
-            {cell.splice(0, columns.length).map(({id, text}) => (
-              <td key={id}>{text}</td>
-            ))}
-          </tr>
+          <Row
+            key={`${row}-${rowIndex + 1}`}
+            rowName={row}
+            cells={cell.splice(0, columns.length)}
+          />
         ))}
       </tbody>
     </table>
