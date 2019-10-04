@@ -4,17 +4,18 @@ import {validateEmail} from './utils'
 import css from './styles.css'
 
 const EmailInput = () => {
-  const [email, changeEmail] = useState('')
+  const [email, setEmail] = useState('')
   const [error, setError] = useState('')
-  const handleSubmit = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault()
     if (!error) {
-      changeEmail('')
+      setEmail('')
     }
   }
   const handleInputChange = ({target: {value}}) => {
     const validationError = validateEmail(value)
     setError(validationError)
-    changeEmail(value)
+    setEmail(value)
   }
 
   return (
@@ -31,12 +32,8 @@ const EmailInput = () => {
         className={classNames(css.input, error && css['input--error'])}
         autoComplete="email"
         onChange={handleInputChange}
-        onSubmit={handleSubmit}
         value={email}
       />
-      {error && (
-        <span>{error}</span>
-      )}
       <button
         type="submit"
         className={css.button}
