@@ -1,6 +1,12 @@
 const URIs = [
   'http://www.json-generator.com/api/json/get/cqAHvIbaxu',
-  'https://github.com/mharyst', /* Need for random error */
+  'http://www.json-generator.com/api/json/get/ceiOoAbgUi',
+  'http://www.json-generator.com/api/json/get/bVUbSgtSBe',
+  'http://www.json-generator.com/api/json/get/cfeoLUEVaq',
+  'http://www.json-generator.com/api/json/get/cfJYEfNaEO',
+  'http://www.json-generator.com/api/json/get/cgAbvvWLuG',
+  'http://www.json-generator.com/api/json/get/ceoyeSXBBu',
+  // 'https://github.com/mharyst', /* Need for random error */
 ]
 
 const getRandomUri = () => {

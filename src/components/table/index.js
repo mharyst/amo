@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
-import {fetchData} from './utils'
-import Column from './column'
-import Row from './row'
+import {fetchData} from './api'
+import {Column, Row} from './components'
+import css from './styles.css'
 
 const Table = () => {
   const [loading, setLoading] = useState(true)
@@ -32,7 +32,7 @@ const Table = () => {
   const possibleRowsAmount = Math.ceil(cell.length / columns.length)
   const visibleRows = rows.splice(0, possibleRowsAmount)
   return (
-    <table>
+    <table className={css.table}>
       <tbody>
         <tr>
           <Column />

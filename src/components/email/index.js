@@ -37,6 +37,7 @@ const EmailInput = () => {
       <button
         type="submit"
         className={css.button}
+        disabled={error}
       >
         Resend
       </button>

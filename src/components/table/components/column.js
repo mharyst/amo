@@ -1,8 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import css from './styles.css'
+
 
 const Column = ({text}) => (
-  <th>{text}</th>
+  <th className={css.column}>{text}</th>
 )
 
 Column.propTypes = {

@@ -2,6 +2,8 @@
 
 Amomedia test task.
 
+Live demo: http://amomedia.space/
+
 ## Building and running on localhost
 
 First install dependencies:
